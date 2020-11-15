@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx
+    restart: unless-stopped
+    ports:
+      - 80:80/tcp
+      - 443:443/tcp
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/user.conf.d:ro
+      - ./nginx/ssl/niti.codes.crt:/etc/ssl/niti.codes.crt
+      - ./nginx/ssl/niti.codes.key:/etc/ssl/niti.codes.key
+
+    

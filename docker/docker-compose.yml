@@ -10,17 +10,5 @@ services:
       - ./servers.json:/server/servers.json
     expose:
       - "8080"
-  nginx:
-    image: staticfloat/nginx-certbot
-    restart: unless-stopped
-    ports:
-      - 80:80/tcp
-      - 443:443/tcp
-    environment:
-      CERTBOT_EMAIL: nitikub@gmail.com
-    volumes:
-      - ./nginx/conf.d:/etc/nginx/user.conf.d:ro
-      - letsencrypt:/etc/letsencrypt
-volumes:
-  letsencrypt:
+
     
