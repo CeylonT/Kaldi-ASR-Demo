@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  web:
+    command: --servers /server/servers.json --cert-file /server/niti.codes.crt --key-file /server/niti.codes.key --port 443
+    volumes:
+      - ./nginx/ssl/niti.codes.crt:/server/niti.codes.crt
+      - ./nginx/ssl/niti.codes.key:/server/niti.codes.key
+    ports:
+      - "443:443"

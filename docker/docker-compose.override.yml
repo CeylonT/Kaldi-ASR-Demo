@@ -1,14 +1,18 @@
 version: '3.7'
 services:
-  nginx:
-    image: nginx
-    restart: unless-stopped
+  web:
     ports:
-      - 80:80/tcp
-      - 443:443/tcp
-    volumes:
-      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
-      - ./nginx/ssl/niti.codes.crt:/etc/ssl/niti.codes.crt
-      - ./nginx/ssl/niti.codes.key:/etc/ssl/niti.codes.key
+      - "8080:8080"
+
+  # nginx:
+  #   image: nginx
+  #   restart: unless-stopped
+  #   ports:
+  #     - 80:80/tcp
+  #     - 443:443/tcp
+  #   volumes:
+  #     - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+  #     - ./nginx/ssl/niti.codes.crt:/etc/ssl/niti.codes.crt
+  #     - ./nginx/ssl/niti.codes.key:/etc/ssl/niti.codes.key
 
     

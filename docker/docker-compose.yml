@@ -8,7 +8,5 @@ services:
     restart: unless-stopped
     volumes:
       - ./servers.json:/server/servers.json
-    expose:
-      - "8080"
 
     
