@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
   web:
     build: ./web
-    image: "CeylonT/kaldi-webrtc"
+    image: "ceylont/kaldi-webrtc"
     restart: unless-stopped
     volumes:
       - ./servers.json:/server/servers.json
