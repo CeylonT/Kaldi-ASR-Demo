@@ -4,7 +4,8 @@ services:
     image: "danijel3/kaldi-online-tcp:aspire"
     restart: unless-stopped
   web:
-    image: "danijel3/kaldi-webrtc"
+    build: ./web
+    image: "CeylonT/kaldi-webrtc"
     restart: unless-stopped
     volumes:
       - ./servers.json:/server/servers.json
